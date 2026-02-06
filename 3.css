@@ -1,0 +1,153 @@
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            background-color: #f0f2f5; 
+            margin: 0; 
+            padding: 0; 
+            display: flex; 
+            justify-content: center;
+            touch-action: pan-x pan-y;
+        }
+
+        .container { 
+            max-width: 475px; 
+            width: 100%; 
+            background: #fff; 
+            border-radius: 50px; 
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4); 
+            overflow: hidden; 
+            padding-bottom: 30px; 
+            margin: 0;
+        }
+
+        #my-locker-header { 
+            width: 100%; 
+            height: 180px; 
+            background: url('https://store.supercell.com/_next/static/media/store-card-bs-25.dedae54d.png') center/cover no-repeat; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            color: white; 
+            text-align: center; 
+        }
+
+        .instruction-text { 
+            padding: 25px 20px 15px; 
+            font-size: 1.05em; 
+            color: #000; 
+            line-height: 1.4; 
+        }
+
+        #offerContainer { 
+            padding: 0 15px; 
+            display: flex; 
+            flex-direction: column; 
+            gap: 25px; 
+        }
+
+        .offer-card { 
+            background: #fff; 
+            width: 100%; 
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            border-radius: 20px/50%; 
+            border: 2px solid #ffcc00;
+            border-right: 1px solid #ffffff29;
+            position: relative;
+            box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.4), 0 0 7px rgba(255, 255, 255, 0.7);
+            animation: glow-rotate 3s linear infinite;
+        } 
+
+        @keyframes glow-rotate {
+            0% { border-color: #ffcc00; box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.4); }
+            50% { border-color: #ffe066; box-shadow: 0 15px 20px -10px rgba(255, 204, 0, 0.3); }
+            100% { border-color: #ffcc00; box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.4); }
+        }
+
+        .offer-top { display: flex; align-items: flex-start; gap: 15px; text-align: left; }
+
+        .icon-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 85px;
+        }
+
+        .offer-icon { 
+            width: 70px; 
+            height: 70px; 
+            object-fit: cover; 
+            margin-bottom: 8px; 
+            background: linear-gradient(0deg,#fff,#fff 49.5%,#fff 60%,#fff 95%,#fff);
+            border-radius: 20px/50%; 
+            border-right: 3px solid #ffffff29;
+            box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.4), 0 0 7px rgba(255, 255, 255, 0.7);
+            animation: glow-rotate 3s linear infinite;
+        }  
+
+        .points-box { 
+            display: inline-flex; 
+            align-items: center; 
+           background-color: #401c59;
+            padding: 4px 10px; 
+            border-radius: 15px; 
+            color: white; 
+            font-weight: 800; 
+            font-size: 13px; 
+            margin-bottom: 5px;
+            width: 70%;
+            justify-content: center;
+ box-shadow: 
+    0 15px 10px -10px rgba(0, 0, 0, 0.4),
+    0 0 7px rgba(255, 255, 255, 0.7);
+  animation: glow-rotate 3s linear infinite;
+}  
+
+
+        .s-img { width: 16px; height: 16px; margin-right: 5px; border-radius: 20px/50%; }
+
+        .offer-info { flex: 1; }
+        .offer-name { font-weight: 700; font-size: 16px; color: #333; margin: 0 0 8px 0; }
+        .offer-desc { font-size: 16px; color: #777; line-height: 1.4; }
+
+        .btn-start { 
+            color: white; 
+            padding: 14px 0; 
+            width: 100%; 
+            margin-top: 15px;
+            font-weight: 800; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            gap: 10px; 
+            border: none; 
+            font-size: 16px; 
+            text-transform: uppercase;
+            background: linear-gradient(0deg,#cd7724,#cd7724 49.5%,#ec9f38 60%,#fdeca9 95%,#efb741);
+            border-radius: 20px/50%;    
+            border-right: 1px solid #ffffff29;
+            box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.4), 0 0 7px rgba(255, 255, 255, 0.7);
+            animation: glow-rotate 3s linear infinite;
+            cursor: pointer;
+        }
+
+        .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); display: none; justify-content: center; align-items: center; z-index: 1000; }
+        .modal-content { 
+            background: white; width: 85%; max-width: 380px; padding: 25px; text-align: center; 
+            background: linear-gradient(0deg,#fff,#fff 49.5%,#fff 60%,#fff 95%,#fff);
+            border-radius: 20px/50%; border: 3px solid #ffcc00; border-right: 1px solid #ffffff29;
+            box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.4), 0 0 7px rgba(255, 255, 255, 0.7);
+            animation: glow-rotate 3s linear infinite;
+        }  
+        .modal-header { color: #7c26c7; font-weight: 800; font-size: 20px; margin-bottom: 15px; }
+        .modal-btn-confirm { 
+            color: white; padding: 14px; display: block; text-decoration: none; font-weight: 700; margin-bottom: 10px;
+            background: linear-gradient(0deg,#cd7724,#cd7724 49.5%,#ec9f38 60%,#fdeca9 95%,#efb741);
+            border-radius: 20px/50%; border-right: 1px solid #ffffff29;
+            box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.4), 0 0 7px rgba(255, 255, 255, 0.7);
+            animation: glow-rotate 3s linear infinite;
+        }  
+        .modal-btn-cancel { color: #888; text-decoration: none; font-size: 14px; font-weight: 600; }
+        
+        @media (max-width: 600px) { .container { border-radius: 0; } }
